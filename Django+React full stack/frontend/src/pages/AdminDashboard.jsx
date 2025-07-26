@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const AdminDashboard = () => {
   const [users, setUsers] = useState([]);
@@ -182,6 +183,18 @@ const AdminDashboard = () => {
             </>
           )}
         </div>
+
+
+        {/* Analytics Button */}
+        <Button 
+          variant="contained" 
+          color="primary"
+          onClick={() => navigate('/analytics')}
+          sx={{ margin: '10px' }}
+        >
+          View Analytics
+        </Button>
+
       </main>
 
       {/* Footer */}

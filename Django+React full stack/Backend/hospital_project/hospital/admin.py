@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser
+from .models import CustomUser, AdminAnalytics
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
@@ -11,5 +11,14 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = UserAdmin.add_fieldsets + (
         (None, {'fields': ('role',)}),
     )
+
+
+# ------------------new changes-------------------
+@admin.register(AdminAnalytics)
+class AdminAnalyticsAdmin(admin.ModelAdmin):
+    list_display = ('admin', 'patient_name', 'fees', 'profit', 'loss', 'date_created')
+    list_filter = ('admin', 'date_created')
+    search_fields = ('patient_name', 'admin__username')
+# --------------------------------------------------
 
 admin.site.register(CustomUser, CustomUserAdmin)

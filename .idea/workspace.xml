@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2ce2c95-5713-4acf-97d0-80c3feaedccc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/frontend/src/pages/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/frontend/src/pages/AdminDashboard.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MyGitAccount2020&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MyGitAccount2020/DjangoReactRBACFullStackRepository.git&quot;,
+    &quot;accountId&quot;: &quot;06590564-8f8d-49a6-9735-c7664352144b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="30OuthqpdpokCJldPah3Gq8PFYz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ATUL GUNJAL folder/Projects/Python/Django+React+RBAC+JWT full stack&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-dfff61a61320-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2ce2c95-5713-4acf-97d0-80c3feaedccc" name="Changes" comment="" />
+      <created>1753511158006</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753511158006</updated>
+    </task>
+    <servers />
+  </component>
+</project>

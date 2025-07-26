@@ -1,15 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import status, generics
 from django.contrib.auth import authenticate
-from .serializers import UserSerializer
+from .serializers import UserSerializer, AdminAnalyticsSerializer
 from rest_framework.authtoken.models import Token
 from .permissions import IsDoctor
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.permissions import IsAdminUser
-from .models import CustomUser
-
-
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from .models import CustomUser, AdminAnalytics
 
 class RegisterView(APIView):
     def post(self, request):
@@ -35,7 +32,7 @@ class LoginView(APIView):
 
 
 class UserListView(APIView):
-    # permission_classes = [IsAdminUser]  # Only admins can access
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         users = CustomUser.objects.all()
@@ -49,3 +46,22 @@ class DoctorOnlyView(APIView):
 
     def get(self, request):
         return Response({"message": "Hello, Doctor!"})
+
+# ------------------new changes-------------------
+class AdminAnalyticsView(generics.ListCreateAPIView):
+    serializer_class = AdminAnalyticsSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return AdminAnalytics.objects.filter(admin=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(admin=self.request.user)
+
+class AdminAnalyticsDetailView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = AdminAnalyticsSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return AdminAnalytics.objects.filter(admin=self.request.user)
+        # --------------------------------------------------

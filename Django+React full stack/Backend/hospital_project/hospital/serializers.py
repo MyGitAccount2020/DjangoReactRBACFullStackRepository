@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser
+from .models import CustomUser, AdminAnalytics
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -14,3 +14,16 @@ class UserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
+
+# -------------------new changes-------------------
+class AdminAnalyticsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AdminAnalytics
+        fields = '__all__'
+        read_only_fields = ('admin', 'date_created')
+
+    def validate(self, data):
+        if float(data['profit']) < 0 or float(data['loss']) < 0:
+            raise serializers.ValidationError("Profit and loss cannot be negative")
+        return data
+        # ----------------------------------------------------

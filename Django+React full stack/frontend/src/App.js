@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import DoctorDashboard from './pages/DoctorDashboard';
 import NurseDashboard from './pages/NurseDashboard';
+import Analytics from './pages/Analytics';
 import './App.css';
 
 const ProtectedRoute = ({ role, children }) => {
@@ -48,6 +49,9 @@ function App() {
             <AdminDashboard />
           </ProtectedRoute>
         } />
+
+
+        <Route path="/analytics" element={<Analytics />} />
 
         {/* Fallback to login if no match */}
         <Route path="*" element={<Navigate to="/login" />} />
