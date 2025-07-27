@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2ce2c95-5713-4acf-97d0-80c3feaedccc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/Backend/hospital_project/hospital_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django+React full stack/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django+React full stack/frontend/src/pages/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/frontend/src/pages/AdminDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django+React full stack/frontend/src/pages/LoginRegister.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Django+React full stack/frontend/src/pages/LoginRegister.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

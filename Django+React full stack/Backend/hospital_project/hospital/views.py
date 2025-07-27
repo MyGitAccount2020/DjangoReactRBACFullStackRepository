@@ -7,6 +7,8 @@ from rest_framework.authtoken.models import Token
 from .permissions import IsDoctor
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from .models import CustomUser, AdminAnalytics
+from rest_framework.permissions import AllowAny
+
 
 class RegisterView(APIView):
     def post(self, request):
@@ -20,6 +22,7 @@ class RegisterView(APIView):
 
 
 class LoginView(APIView):
+    permission_classes = [AllowAny]
     def post(self, request):
         username = request.data.get('username')
         password = request.data.get('password')
@@ -31,8 +34,10 @@ class LoginView(APIView):
         return Response({'error': 'Invalid Credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
 
-class UserListView(APIView):
-    permission_classes = [IsAuthenticated]
+class UserListView(generics.ListAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
 
     def get(self, request):
         users = CustomUser.objects.all()
@@ -64,4 +69,13 @@ class AdminAnalyticsDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return AdminAnalytics.objects.filter(admin=self.request.user)
-        # --------------------------------------------------
+
+class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]
+
+    def perform_destroy(self, instance):
+        # Add any custom deletion logic here
+        instance.delete()
+ # --------------------------------------------------

@@ -4,7 +4,7 @@ from .views import (
     LoginView,
     UserListView,
     AdminAnalyticsView,
-    AdminAnalyticsDetailView
+    AdminAnalyticsDetailView, UserDetailView
 )
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='login'),
     path('users/', UserListView.as_view(), name='user-list'),
     # -----------------------new changes-------------------
+    path('users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),  # Add this line
     path('analytics/', AdminAnalyticsView.as_view(), name='analytics-list'),
     path('analytics/<int:pk>/', AdminAnalyticsDetailView.as_view(), name='analytics-detail'),
     # --------------------------------------------------------

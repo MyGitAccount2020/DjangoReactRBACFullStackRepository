@@ -10,32 +10,62 @@ const AdminDashboard = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
-  const fetchUsers = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const response = await axios.get('http://localhost:8000/api/users/');
-      setUsers(response.data);
-    } catch (error) {
-      console.error('Error fetching users:', error);
-      setError('Failed to load users. Please try again.');
-    } finally {
-      setLoading(false);
+ const fetchUsers = async () => {
+  setLoading(true);
+  setError(null);
+  try {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+      return;
     }
-  };
+
+    const response = await axios.get('http://localhost:8000/api/users/', {
+      headers: {
+        'Authorization': `Token ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    setUsers(response.data);
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    if (error.response?.status === 401) {
+      setError('Session expired. Please login again.');
+      localStorage.removeItem('token');
+      navigate('/login');
+    } else {
+      setError('Failed to load users. Please try again.');
+    }
+  } finally {
+    setLoading(false);
+  }
+};
 
   const deleteUser = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this user?")) return;
-    
-    try {
-      await axios.delete(`http://localhost:8000/api/users/${id}/`);
-      setUsers(users.filter(user => user.id !== id));
-      alert('User deleted successfully');
-    } catch (error) {
-      console.error("Error deleting user:", error);
+  if (!window.confirm("Are you sure you want to delete this user?")) return;
+  
+  try {
+    const token = localStorage.getItem('token');
+    await axios.delete(`http://localhost:8000/api/users/${id}/`, {
+      headers: {
+        'Authorization': `Token ${token}`,
+        'Content-Type': 'application/json'
+      }
+    });
+    setUsers(users.filter(user => user.id !== id));
+    alert('User deleted successfully');
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    if (error.response?.status === 401) {
+      alert("Session expired. Please login again.");
+      localStorage.removeItem('token');
+      navigate('/login');
+    } else {
       alert("Failed to delete user. Please try again.");
     }
-  };
+  }
+};
+
 
   const handleLogout = () => {
     localStorage.clear();
